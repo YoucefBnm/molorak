@@ -1,0 +1,106 @@
+.about{
+  background-color: lighten($color-grey-light, 10%);
+  padding: 8rem 0;
+  &__container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 6rem;
+  }
+  &__imgs{
+    display: grid;
+    grid-template-columns: repeat(2, 5rem) repeat(3, 20%);
+    grid-template-rows: repeat(5, 8rem);
+    @media only screen and (max-width: $bp-sm){
+      display: flex;
+    }
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    transition: all .2s;
+    overflow: hidden;
+
+
+    &:hover{
+      transform: scale(1.05) translateY(-5px);
+      box-sizing: 0 2.5rem 4rem rgba($color-black-dark, .8);
+      z-index: 10;
+    }
+    &:hover &:not(:hover){
+      transform: scale(.5);
+    }
+  }
+
+
+  .img--1{
+    grid-row: 1 / 4;
+    grid-column: 2 / 6;
+    @media only screen and (max-width: $bp-md){
+      grid-column: 1 / 4;
+     }
+  }
+  .img--2{
+    grid-row: 2 / 5;
+    grid-column: 4 / 7;
+    margin-top: 4rem;
+    @media only screen and (max-width: $bp-md){
+       grid-column: 2 / 5;
+     }
+
+  }
+  .img--3{
+    grid-row: 3 / 6;
+    grid-column: 3 / 6;
+    @media only screen and (max-width: $bp-md){
+      grid-column: 3 / 6;
+    }
+
+  }
+
+  &__detail{
+    align-self: center;
+    @media only screen and (max-width: $bp-md){
+      padding: 0 1.5rem;
+    }
+    em{
+      margin-left: -3rem;
+      opacity: 0;
+      transition: all .3s;
+    }
+
+
+  }
+  &__txt{
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
+  }
+
+  &__desc{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-black-dark;
+  }
+  &__btn{
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    backface-visibility: hidden;
+    color: $color-blue-dark;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all .3s;
+
+    &:hover{
+      transform: translateY(-2px);
+    }
+  }
+  &__btn:hover em{
+      margin-left: .5rem;
+      opacity: 1;
+
+  }
+}

@@ -1,0 +1,55 @@
+.testimonial{
+  padding: 8rem 4rem;
+  background-color: $color-grey-light;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+
+  @media only screen and(max-width: $bp-md){
+    padding: 8rem 1.5rem;
+  }
+}
+
+.review{
+  background-color: $color-black-dark;
+  border-radius: 2px;
+  position: relative;
+  padding: 0 3rem;
+  &::before{
+    content: "\201C";
+    position: absolute;
+    top: -2.2rem;
+    left: 0;
+    line-height: 1;
+    font-size: 20rem;
+    color: $color-grey-light;
+    font-family: sans-serif;
+    z-index: 1;
+  }
+  &__robot-img{
+    height: 15rem;
+    width: 15rem;
+  }
+  &__robot-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 1rem auto;
+    color: $color-light;
+  }
+  &__quote{
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: $color-grey-light;
+  }
+  &__rating{
+    display: flex;
+    margin: 2rem 0;
+  }
+  &__icon-star{
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: lighten(#A0522D, 10%);
+
+  }
+}

@@ -1,0 +1,57 @@
+$costum-font: 'Charmonman', cursive;
+$default-font:'Source Sans Pro', sans-serif;
+
+/////////////
+$color-black-dark: #0e1111;
+$color-black-md: #353839;
+$color-black-light: #414a4c;
+
+$color-green-dark: #135640;
+$color-green-md: #1e7252;
+$color-green-light: #009061;
+
+$color-blue-dark: #5bafc1;
+$color-blue-md: #0091b0;
+$color-blue-light: #31bee7;
+
+$color-red-dark: #96312e;
+$color-red-orange: #d1675a;
+
+$color-grey-light: #cecfc3;
+$color-light: #ebedea;
+
+//////////////////
+$box-shadow: 0 1.5rem 4rem rgba($color-black-dark, .15);
+/////////////
+$bp-big: 75em;
+$bp-lg: 62.5em;
+$bp-md: 50em;
+$bp-sm: 37.5em;
+////////////
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and(max-width: $bp-lg){
+    font-size: 50%;
+  }
+}
+body{
+  font-family: $default-font;
+  color: $color-black-light;
+  font-weight: 300;
+  line-height: 1.6;
+
+}
+
+.wrapper{
+  // display: grid;
+  // grid-template-rows: 100vh repeat(6, min-content);
+}

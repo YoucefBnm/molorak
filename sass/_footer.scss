@@ -1,0 +1,83 @@
+.footer{
+  background-color: $color-black-light;
+  display: grid;
+  grid-template-rows: min-content max-content min-content;
+  grid-gap: 2rem;
+
+  &__container{
+    display: grid;
+    justify-items: center;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+  &__logo-box{
+
+    display: grid;
+    justify-content: center;
+    span{
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      color: $color-light;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+  &__logo{
+    justify-self: center;
+  }
+
+  &__nav{
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    grid-gap: 2rem;
+  }
+  &__item{
+    list-style: none;
+    text-align: center;
+
+    &:hover{
+      background-color: rgba(0, 0,0, .3);
+    }
+  }
+  &__link{
+    text-decoration: none;
+    color: $color-grey-light;
+    font-size: 1.7rem;
+    font-weight: 300;
+    transition: all .3s;
+    &:hover{
+      transform: translateY(2px) scale(1.02);
+      color: #fff;
+    }
+  }
+
+  &__social{
+
+    display: grid;
+    grid-template-columns: repeat(7, max-content);
+    grid-gap: 2rem;
+  }
+  &__icon{
+    width: 2.5rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+      opacity: .8;
+    }
+  }
+
+  &__legal{
+
+    font-size: 1.5rem;
+    color: $color-grey-light;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    a{
+      text-decoration: none;
+      color: $color-blue-dark;
+    }
+  }
+}
